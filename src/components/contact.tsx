@@ -1,14 +1,14 @@
 "use client"
 
 import type React from "react"
-
+import { FaLinkedinIn } from "react-icons/fa";
 import { useInView } from "framer-motion"
 import { useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { MapPin, Mail, Phone, Send } from "lucide-react"
+import { MapPin, Mail, Phone, Send, Linkedin, LinkedinIcon } from "lucide-react"
 
 export default function Contact() {
   const ref = useRef(null)
@@ -41,7 +41,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-800" ref={ref}>
+    <section id="contact" className=" bg-white dark:bg-gray-800" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
@@ -64,11 +64,12 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
           >
-            Feel free to reach out to me for any questions or opportunities. I&#39;ll get back to you as soon as possible.
+            Feel free to reach out to me for any questions or opportunities. I&#39;ll get back to you as soon as
+            possible.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -77,29 +78,29 @@ export default function Contact() {
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Get In Touch</h3>
 
             <div className="space-y-6">
-              <div className="flex items-center">
+              <div className="flex items-start">
                 <div className="flex-shrink-0 bg-gradient-to-r from-primary to-primary p-3 rounded-lg">
                   <MapPin className="h-3 w-3 text-white" />
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Location</h4>
-                  <p className="text-gray-600 dark:text-gray-300 mt-1">Andhra Pradesh, Kakinada , India</p>
+                  <p className="text-gray-600 dark:text-gray-300 mt-1">Andhra Pradesh, Kakinada, India</p>
                 </div>
               </div>
 
-              <div className="flex items-center">
+              <div className="flex items-start">
                 <div className="flex-shrink-0 bg-gradient-to-r from-primary to-primary p-3 rounded-lg">
                   <Mail className="h-3 w-3 text-white" />
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Email</h4>
-                  <p className="text-gray-600 dark:text-gray-300 mt-1">gurubrahmamvelpula@example.com</p>
+                  <p className="text-gray-600 dark:text-gray-300 mt-1 break-words">gurubrahmamvelpula@example.com</p>
                 </div>
               </div>
 
-              <div className="flex items-center">
+              <div className="flex items-start">
                 <div className="flex-shrink-0 bg-gradient-to-r from-primary to-primary p-3 rounded-lg">
-                  <Phone className="h-3 w-3 text-white " />
+                  <Phone className="h-3 w-3 text-white" />
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Phone</h4>
@@ -110,12 +111,12 @@ export default function Contact() {
 
             <div className="mt-8">
               <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Follow Me</h4>
-              <div className="flex space-x-4">
+              <div className="flex flex-wrap gap-4">
                 <a
-                  href="#"
-                  className="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 p-3 rounded-full transition-colors duration-300"
+                  href="https://www.linkedin.com/in/guru-brahmam-velpula"
+                  className="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 p-4 rounded-full transition-colors duration-300"
                 >
-                  <svg
+                  {/* <svg
                     className="h-5 w-5 text-gray-700 dark:text-gray-300"
                     fill="currentColor"
                     viewBox="0 0 24 24"
@@ -126,10 +127,12 @@ export default function Contact() {
                       d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
                       clipRule="evenodd"
                     />
-                  </svg>
+                  </svg> */}
+                  <FaLinkedinIn />
+
                 </a>
                 <a
-                  href="#"
+                  href=""
                   className="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 p-3 rounded-full transition-colors duration-300"
                 >
                   <svg
@@ -159,7 +162,7 @@ export default function Contact() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/Vgurubrahmam"
                   className="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 p-3 rounded-full transition-colors duration-300"
                 >
                   <svg
@@ -176,10 +179,10 @@ export default function Contact() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="vgurubrahmam338@gmail.com"
                   className="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 p-3 rounded-full transition-colors duration-300"
                 >
-                  <svg
+                  {/* <svg
                     className="h-5 w-5 text-gray-700 dark:text-gray-300"
                     fill="currentColor"
                     viewBox="0 0 24 24"
@@ -190,7 +193,8 @@ export default function Contact() {
                       d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
                       clipRule="evenodd"
                     />
-                  </svg>
+                  </svg> */}
+                  <Mail/>
                 </a>
               </div>
             </div>
@@ -200,7 +204,7 @@ export default function Contact() {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8"
+            className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
           >
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Send Me a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -258,10 +262,7 @@ export default function Contact() {
                   required
                 />
               </div>
-              <Button
-                type="submit"
-                className="w-full bg-gradient-to-r from-primary to-primary "
-              >
+              <Button type="submit" className="w-full bg-gradient-to-r from-primary to-primary">
                 <Send className="h-4 w-4 mr-2" />
                 Send Message
               </Button>
