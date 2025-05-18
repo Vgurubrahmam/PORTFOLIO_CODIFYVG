@@ -3,45 +3,42 @@
 import type React from "react"
 import { FaLinkedinIn } from "react-icons/fa";
 import { useInView } from "framer-motion"
-import { useRef, useState } from "react"
+import { useRef } from "react"
 import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { MapPin, Mail, Phone, Send, Linkedin, LinkedinIcon } from "lucide-react"
+import { MapPin, Mail, Phone } from "lucide-react"
 
 export default function Contact() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.3 })
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  })
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   subject: "",
+  //   message: "",
+  // })
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   const { name, value } = e.target
+  //   setFormData((prev) => ({ ...prev, [name]: value }))
+  // }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission logic here
-    console.log(formData)
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    })
-    // Show success message
-    alert("Message sent successfully!")
-  }
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault()
+  //   // Handle form submission logic here
+  //   console.log(formData)
+  //   // Reset form
+  //   setFormData({
+  //     name: "",
+  //     email: "",
+  //     subject: "",
+  //     message: "",
+  //   })
+  //   // Show success message
+  //   alert("Message sent successfully!")
+  // }
 
   return (
-    <section id="contact" className=" bg-white dark:bg-gray-800" ref={ref}>
+    <section id="contact" className=" bg-white dark:bg-gray-800 overflow-x-hidden" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
@@ -77,7 +74,7 @@ export default function Contact() {
           >
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Get In Touch</h3>
 
-            <div className="space-y-6">
+            <div className="space-y-6 my-10">
               <div className="flex items-start">
                 <div className="flex-shrink-0 bg-gradient-to-r from-primary to-primary p-3 rounded-lg">
                   <MapPin className="h-3 w-3 text-white" />
@@ -109,12 +106,21 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="mt-8">
+
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 my-5"
+          >
+            <div className="">
               <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Follow Me</h4>
-              <div className="flex flex-wrap gap-4">
+              <div className="grid grid-cols-2 gap-6 place-items-center">
                 <a
                   href="https://www.linkedin.com/in/guru-brahmam-velpula"
-                  className="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 p-4 rounded-full transition-colors duration-300"
+                  className="flex justify-center gap-2 items-center bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 px-4 py-3 rounded-xl transition-colors duration-300 w-full"
                 >
                   {/* <svg
                     className="h-5 w-5 text-gray-700 dark:text-gray-300"
@@ -128,28 +134,31 @@ export default function Contact() {
                       clipRule="evenodd"
                     />
                   </svg> */}
-                  <FaLinkedinIn />
-
+                  <FaLinkedinIn className="h-6  w-6 mb-1 text-gray-700 dark:text-gray-300"/>
+                    <span className="text-sm font-medium">LinkedIn</span>
                 </a>
-                <a
-                  href=""
-                  className="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 p-3 rounded-full transition-colors duration-300"
-                >
-                  <svg
-                    className="h-5 w-5 text-gray-700 dark:text-gray-300"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
+               
+                  <a
+                    href=""
+                  className="flex gap-2 items-center justify-center bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 px-4 py-3 rounded-xl transition-colors duration-300 w-full"
                   >
-                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                  </svg>
-                </a>
+                    <svg
+                      className="h-6 w-6 text-gray-700 dark:text-gray-300"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                    </svg>
+                    <span className="font-medium text-sm">Twitter</span>
+                  </a>
+               
                 <a
                   href="#"
-                  className="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 p-3 rounded-full transition-colors duration-300"
+                  className="flex justify-center items-center gap-2  bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 px-4 py-3 rounded-xl transition-colors duration-300 w-full"
                 >
                   <svg
-                    className="h-5 w-5 text-gray-700 dark:text-gray-300"
+                    className="h-6 w-6 text-gray-700 dark:text-gray-300"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
@@ -160,10 +169,11 @@ export default function Contact() {
                       clipRule="evenodd"
                     />
                   </svg>
+                  <span className="font-medium text-sm">Instagram</span>
                 </a>
                 <a
                   href="https://github.com/Vgurubrahmam"
-                  className="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 p-3 rounded-full transition-colors duration-300"
+                  className="flex justify-center items-center gap-2 px-4 py-3 w-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600  rounded-xl transition-colors duration-300" 
                 >
                   <svg
                     className="h-5 w-5 text-gray-700 dark:text-gray-300"
@@ -177,10 +187,13 @@ export default function Contact() {
                       clipRule="evenodd"
                     />
                   </svg>
+                  <span className="font-medium text-sm">GitHub</span>
                 </a>
-                <a
+                
+              </div>
+              <a
                   href="vgurubrahmam338@gmail.com"
-                  className="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 p-3 rounded-full transition-colors duration-300"
+                  className=" flex justify-center items-center gap-2 px-8 py-3 my-6 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600  rounded-xl transition-colors duration-300 w-full"
                 >
                   {/* <svg
                     className="h-5 w-5 text-gray-700 dark:text-gray-300"
@@ -194,79 +207,11 @@ export default function Contact() {
                       clipRule="evenodd"
                     />
                   </svg> */}
-                  <Mail/>
+                  <Mail className="h-6 w-6 " />
+                  <span className="text-sm font-medium">Email</span>
                 </a>
-              </div>
             </div>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
-          >
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Send Me a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  Your Name
-                </label>
-                <Input
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="John Doe"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  Your Email
-                </label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="john@example.com"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  Subject
-                </label>
-                <Input
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="Job Opportunity"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  Message
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Your message here..."
-                  rows={5}
-                  required
-                />
-              </div>
-              <Button type="submit" className="w-full bg-gradient-to-r from-primary to-primary">
-                <Send className="h-4 w-4 mr-2" />
-                Send Message
-              </Button>
-            </form>
           </motion.div>
         </div>
       </div>

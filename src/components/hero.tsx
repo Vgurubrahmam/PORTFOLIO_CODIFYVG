@@ -89,8 +89,8 @@ export default function Hero() {
             </Button>
             <Button variant="outline" className="group" asChild>
               <a
-                href="https://drive.google.com/uc?export=download&id=1sTSwM5MwTWVmTO7rQXR3qHy78eh_3zOZ"
-                download="VGuruBrahmam_CV.pdf"
+                href="https://drive.google.com/file/d/1sTSwM5MwTWVmTO7rQXR3qHy78eh_3zOZ/view?usp=sharing"
+                
               >
                 <FileText className="mr-2 h-4 w-4" />
                 Download CV
