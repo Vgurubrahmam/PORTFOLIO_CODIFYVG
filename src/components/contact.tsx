@@ -45,7 +45,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white"
+            className="text-3xl md:text-4xl font-bold mt-4  text-gray-900 dark:text-white"
           >
             Contact Me
           </motion.h2>
