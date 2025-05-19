@@ -91,7 +91,7 @@ export default function Contact() {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Email</h4>
-                  <p className="text-gray-600 dark:text-gray-300 mt-1 break-words">gurubrahmamvelpula@example.com</p>
+                  <p className="text-gray-600 dark:text-gray-300 mt-1 break-words">vgurubrahmam338@gmail.com</p>
                 </div>
               </div>
 
@@ -101,7 +101,7 @@ export default function Contact() {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Phone</h4>
-                  <p className="text-gray-600 dark:text-gray-300 mt-1">+7799136844</p>
+                  <p className="text-gray-600 dark:text-gray-300 mt-1">7799136844</p>
                 </div>
               </div>
             </div>
@@ -139,7 +139,7 @@ export default function Contact() {
                 </a>
                
                   <a
-                    href=""
+                    href="https://twitter.com/Gurubrahmam"
                   className="flex gap-2 items-center justify-center bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 px-4 py-3 rounded-xl transition-colors duration-300 w-full"
                   >
                     <svg
@@ -154,7 +154,7 @@ export default function Contact() {
                   </a>
                
                 <a
-                  href="#"
+                  href="https://www.instagram.com/gurubrahmam.guru.3?igsh=aDZqbzAwN3I4OXAz"
                   className="flex justify-center items-center gap-2  bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 px-4 py-3 rounded-xl transition-colors duration-300 w-full"
                 >
                   <svg

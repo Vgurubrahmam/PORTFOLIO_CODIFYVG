@@ -58,7 +58,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm">© {new Date().getFullYear()} CondifyVG. All rights reserved.</p>
+          <p className="text-muted-foreground text-sm">© {new Date().getFullYear()} CodifyVG. All rights reserved.</p>
           <p className="text-muted-foreground text-sm mt-2 md:mt-0">
             Built with Next.js, Tailwind CSS, and Framer Motion
           </p>

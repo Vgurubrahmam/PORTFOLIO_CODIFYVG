@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowDown, Github, Linkedin, Mail, FileText, ArrowRight } from "lucide-react"
+import {  Github, Linkedin, Mail, FileText, ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 
@@ -129,12 +129,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
-          <ArrowDown className="h-6 w-6" />
-          <span className="sr-only">Scroll Down</span>
-        </a>
-      </div>
+      
     </section>
   )
 }
