@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -14,17 +14,16 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
+      setScrolled(window.scrollY > 10)
     }
 
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const toggleMenu=useCallback(()=>{
+    setIsOpen(prev=>!prev)
+  },[])
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
@@ -70,7 +69,8 @@ export default function Navbar() {
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={() => setIsOpen(!isOpen)}
+                
+                onClick={toggleMenu}
                 className="rounded-full md:hidden"
                 aria-label="Toggle menu"
               >

@@ -55,7 +55,7 @@ export default function About() {
     },
     {
       name: "Node.js",
-      img: "https://static-00.iconduck.com/assets.00/node-js-icon-1817x2048-g8tzf91e.png",
+      img: "https://www.svgrepo.com/show/452075/node-js.svg",
     },
     {
       name: "Express.js",
@@ -63,12 +63,12 @@ export default function About() {
     },
     {
       name: "MongoDB",
-      img: "https://cdn3d.iconscout.com/3d/free/thumb/free-mongo-db-3d-icon-download-in-png-blend-fbx-gltf-file-formats--mongodb-database-document-oriented-nosql-coding-lang-pack-logos-icons-7577996.png",
+      img: "https://www.svgrepo.com/show/373845/mongo.svg",
     },
 
     {
       name: "Postgres",
-      img: "https://static-00.iconduck.com/assets.00/database-postgres-icon-1845x2048-smttmjhf.png",
+      img: "https://www.svgrepo.com/show/354200/postgresql.svg",
     },
 
 
@@ -128,7 +128,7 @@ export default function About() {
 
       <div className="flex flex-col md:flex-row items-center gap-12">
 
-        <Image alt="Profile Image" src={'/profile_image.jpg'} width={400} height={400} className="rounded-xl object-cover" /> 
+        <Image alt="Profile Image" src={'/profile_image.jpg'} width={400} height={400} className="rounded-xl object-cover" priority /> 
 
 
         {/* Right: 70% Content */}
