@@ -144,7 +144,7 @@ export default function Projects() {
                                 <span className="hidden md:block absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-primary" />
 
                                 <div className={`relative w-full md:w-1/2 mb-5 sm:px-5 sm:py-3 md:mb-0  h-80 ${imgSide}`}>
-                                    <Image src={p.image} alt={p.title} fill className="rounded-xl" />
+                                    <Image src={p.image} alt={p.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="rounded-xl" />
                                 </div>
                                 <span className="absolute -left-4 md:hidden md:-translate-x-1/2 top-80  w-5 h-5 rounded-full bg-primary" />
 

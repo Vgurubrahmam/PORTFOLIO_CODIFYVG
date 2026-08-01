@@ -174,7 +174,7 @@ export default function About() {
               <div className="grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3  gap-3 mb-2">
                 {technicalSkills.map(({ name, img }) => (
                   <div key={name} className="flex  flex-wrap justify-center items-center px-4 py-3 dark:bg-none gap-3  bg-muted dark:bg-gray-700  rounded">
-                    <img src={img} alt={name} className="w-6 h-6 object-contain" />
+                    <Image src={img} alt={name} width={24} height={24} className="w-6 h-6 object-contain" />
                     <span className="text-sm font-medium text-foreground">{name}</span>
                   </div>
                 ))}

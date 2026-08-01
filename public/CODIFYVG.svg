@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090b" />
+      <stop offset="100%" stop-color="#18181b" />
+    </linearGradient>
+    <linearGradient id="orange-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7e33" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded Container -->
+  <rect width="128" height="128" rx="28" fill="url(#bg-grad)" stroke="#27272a" stroke-width="2"/>
+  
+  <!-- Subtle border highlight -->
+  <rect width="124" height="124" x="2" y="2" rx="26" fill="none" stroke="url(#orange-grad)" stroke-width="1.5" stroke-opacity="0.3"/>
+
+  <!-- Code Bracket Left < -->
+  <path d="M 36 44 L 22 64 L 36 84" fill="none" stroke="url(#orange-grad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Code Bracket Right > -->
+  <path d="M 92 44 L 106 64 L 92 84" fill="none" stroke="url(#orange-grad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- VG Monogram -->
+  <text x="64" y="73" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="34" fill="#ffffff" text-anchor="middle" letter-spacing="-1">VG</text>
+</svg>
