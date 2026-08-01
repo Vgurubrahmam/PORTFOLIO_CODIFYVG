@@ -13,25 +13,45 @@ export default function Projects() {
 
     const projects = [
         {
-            title: "CV Analysis",
-            description:
-                "Boost your job applications with AI-powered resume analysis. Upload your resume and job description to get detailed ATS compatibility analysis and improvement suggestions.",
-            image: "/cv_analysis.png",
-            technologies: ["React", "Node.js", "MongoDB", "Express.js", "Tailwind CSS", "OpenAI"],
-            github: "https://github.com/Vgurubrahmam",
-            demo: "https://cv-analysis-omega.vercel.app/",
-            date: "May 2025",
-        },
+    title: "AI-Powered CV Analysis & ATS Platform",
+    description:
+        "An AI-powered resume screening platform that extracts structured information from resumes, evaluates ATS compatibility against job descriptions, and provides detailed candidate insights using Large Language Models and semantic search.",
+    image: "/cv_analysis.png",
+    technologies: [
+        "React (TypeScript/Vite)",
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "Supabase",
+        "Redis",
+        "Celery",
+        "SQLAlchemy",
+        "Tailwind CSS",
+        "OpenRouter",
+        "LLMs"
+    ],
+    github: "https://github.com/Vgurubrahmam/AI-Powered-CV_Analysis.git",
+    demo: "https://ai-powered-cv-analysis-alpha.vercel.app/",
+    date: "2026",
+},
         {
-            title: "BlogPost Platform",
-            description:
-                "A dynamic blogging platform that enables users to seamlessly create, read, update, and delete blog posts. Features persistent data storage with secure backend integration.",
-            image: "/blogpost.png",
-            technologies: ["React", "Node.js", "MongoDB", "Express.js", "Bootstrap"],
-            github: "https://github.com/Vgurubrahmam",
-            demo: "https://blogpost-kappa-six.vercel.app/",
-            date: "April 2025",
-        },
+    title: "QuizMakerAI – AI Quiz Generator",
+    description:
+        "An AI-powered quiz generation platform that creates context-aware quizzes using Large Language Models. Built with a scalable FastAPI backend, LangChain, Google Gemini API, and Supabase for intelligent content generation and data management.",
+    image: "/QuizmakerAI.png",
+    technologies: [
+        "React",
+        "Python",
+        "FastAPI",
+        "Supabase",
+        "LangChain",
+        "Google Gemini API",
+        "Tailwind CSS"
+    ],
+    github: "https://github.com/Vgurubrahmam/ai-quiz-generator.git",
+    demo: "https://quizmakerai.vercel.app/",
+    date: "2026",
+},
         {
             title: "Nxt Watch",
             description:

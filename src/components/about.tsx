@@ -25,64 +25,79 @@ export default function About() {
 
   // Technical Skills Data
   const technicalSkills = [
-    {
-      name: "HTML",
-      img: "https://www.svgrepo.com/show/452228/html-5.svg",
-    },
-    {
-      name: "CSS",
-      img: "https://www.svgrepo.com/show/452185/css-3.svg",
-    },
-    {
-      name: "JavaScript",
-      img: "https://www.svgrepo.com/show/349419/javascript.svg",
-    },
-    {
-      name: "TypeScript",
-      img: "https://www.svgrepo.com/show/374146/typescript-official.svg",
-    },
-    {
-      name: "React",
-      img: "https://www.svgrepo.com/show/354259/react.svg",
-    },
-    {
-      name: "Next.js",
-      img: "https://www.svgrepo.com/show/378440/nextjs-fill.svg",
-    },
-    {
-      name: "Tailwind CSS",
-      img: "https://www.svgrepo.com/show/354431/tailwindcss-icon.svg",
-    },
-    {
-      name: "Node.js",
-      img: "https://www.svgrepo.com/show/452075/node-js.svg",
-    },
-    {
-      name: "Express.js",
-      img: "https://www.svgrepo.com/show/330398/express.svg",
-    },
-    {
-      name: "MongoDB",
-      img: "https://www.svgrepo.com/show/373845/mongo.svg",
-    },
-
-    {
-      name: "Postgres",
-      img: "https://www.svgrepo.com/show/354200/postgresql.svg",
-    },
-
-
-    {
-      name: "Python",
-      img: "https://www.svgrepo.com/show/452091/python.svg",
-    },
-
-    {
-      name: "Bootstrap",
-      img: "https://www.svgrepo.com/show/353498/bootstrap.svg"
-    },
-
-  ]
+  {
+    name: "Python",
+    img: "https://www.svgrepo.com/show/452091/python.svg",
+  },
+  {
+    name: "JavaScript",
+    img: "https://www.svgrepo.com/show/349419/javascript.svg",
+  },
+  {
+    name: "SQL",
+    img: "https://www.svgrepo.com/show/374094/sql.svg",
+  },
+  {
+    name: "React",
+    img: "https://www.svgrepo.com/show/354259/react.svg",
+  },
+  {
+    name: "Tailwind CSS",
+    img: "https://www.svgrepo.com/show/354431/tailwindcss-icon.svg",
+  },
+  {
+    name: "FastAPI",
+    img: "https://cdn.simpleicons.org/fastapi",
+  },
+  {
+    name: "Node.js",
+    img: "https://www.svgrepo.com/show/452075/node-js.svg",
+  },
+  {
+    name: "Express.js",
+    img: "https://cdn.simpleicons.org/express",
+  },
+  {
+    name: "PostgreSQL",
+    img: "https://www.svgrepo.com/show/354200/postgresql.svg",
+  },
+  {
+    name: "MongoDB",
+    img: "https://www.svgrepo.com/show/373845/mongo.svg",
+  },
+  {
+    name: "Supabase",
+    img: "https://cdn.simpleicons.org/supabase",
+  },
+  {
+    name: "Git",
+    img: "https://cdn.simpleicons.org/git",
+  },
+  {
+    name: "GitHub",
+    img: "https://cdn.simpleicons.org/github",
+  },
+  {
+    name: "Postman",
+    img: "https://cdn.simpleicons.org/postman",
+  },
+  {
+    name: "LangChain",
+    img: "https://cdn.simpleicons.org/langchain",
+  },
+  {
+    name: "OpenAI",
+    img: "https://www.streamlinehq.com/icons/download/openai--31088",
+  },
+  {
+    name: "Google Gemini",
+    img: "https://cdn.simpleicons.org/googlegemini",
+  },
+  {
+    name: "Claude",
+    img: "https://cdn.simpleicons.org/claude",
+  },
+];
 
 
 
@@ -138,7 +153,7 @@ export default function About() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className=""
         >
-          <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">From Learner to Creator — <span className="text-primary">My Coding Journey</span></h3>
+          <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">From Learner to Creator — <span className="text-primary">Intelligent AI Solutions</span></h3>
           <p className="text-gray-600 dark:text-gray-300 mb-6">
             I’m V. Guru Brahmam, a Full-Stack Developer passionate about building meaningful digital solutions. My journey began with curiosity and a love for solving real-world problems through code. I specialize in the MERN stack, SQL, and Python, delivering both elegant UIs and robust backend systems. I thrive on learning by building, and this portfolio reflects my dedication to continuous growth and innovation.
           </p>
@@ -167,21 +182,47 @@ export default function About() {
             </TabsContent>
 
 
-            <TabsContent value="experience">
-              <div className="space-y-4">
-                <div className="flex flex-wrap justify-between">
+           <TabsContent value="experience">
+  <div className="space-y-4">
+    <div className="flex flex-wrap justify-between">
+      <h1>
+        <span className="text-primary font-semibold text-lg">
+          Junior Gen AI Engineer Intern (Backend Focus)
+        </span>{" "}
+        – Thryakshari, Tirupati
+      </h1>
+      <p className="font-semibold">Internship</p>
+    </div>
 
-                  <h1><span className="text-primary font-semibold text-lg">Web Developer</span> – (Global Coding Club (GCC)) - Kakinada, Andhra Pradesh </h1>
-                  <p className="font-semibold">June 2024 - Present</p>
-                </div>
-                <ul className="list-disc px-8 mb-4 text-foreground/60">
-                  <li>Led a team of six members to develop and maintain web applications using React.js and Node.js</li>
-                  <li> Integrated APIs to enhance functionality and optimize user experience.</li>
-                  <li>Collaborated with teams to build internal tools and gained expertise in full-stack development with React.js, Node.js,
-                    MongoDB, Express.js, SQL, Python, JavaScript.</li>
-                </ul>
-              </div>
-            </TabsContent>
+    <ul className="list-disc px-8 mb-4 text-foreground/60 space-y-2">
+      <li>
+        Built LLM-driven filtering agents for Projects, Contacts, and Segments
+        using prompt engineering and structured multi-agent workflows.
+      </li>
+      <li>
+        Developed WhatsApp template automation and AI voice agents integrated
+        into a production CRM platform.
+      </li>
+      <li>
+        Integrated OpenAI, Gemini, Claude, and Azure AI APIs with FastAPI to
+        build scalable AI-powered backend services.
+      </li>
+      <li>
+        Implemented semantic search using vector embeddings and improved
+        real-time performance through caching strategies.
+      </li>
+      <li>
+        Managed database migrations with Alembic and contributed to competitor
+        analysis and production planning.
+      </li>
+      <li>
+        Worked in an Agile development environment by raising pull requests,
+        fixing production issues, and participating in mentor-led Git code
+        reviews.
+      </li>
+    </ul>
+  </div>
+</TabsContent>
 
             <TabsContent value="education">
               <section id="education" className="bg-white dark:bg-gray-800" ref={ref}>

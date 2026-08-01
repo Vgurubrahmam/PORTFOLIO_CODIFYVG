@@ -74,7 +74,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4 text-2xl md:text-3xl font-semibold text-foreground"
           >
-            <span className="text-primary">Tech Enthusiast</span> & Full-Stack Web Developer
+            <span className="text-primary">Tech Enthusiast</span> & Software Engineer Building AI-Driven Backend Platforms
           </motion.h2>
 
           <motion.p
@@ -83,8 +83,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Passionate coder dedicated to turning ideas into intuitive and efficient digital experiences.
-            Skilled in leveraging modern web technologies to build responsive, scalable, and user-friendly applications.
+            Software developer with production internship experience in backend engineering and GenAI integration. Built multi-agent LLM workflows, semantic search features, and WhatsApp automation for a CRM platform using FastAPI and vector embeddings. Delivered projects including an AI-powered ATS resume analysis platform and QuizMakerAI, an AI quiz generator.
           </motion.p>
 
           {/* Buttons */}
@@ -103,7 +102,7 @@ export default function Hero() {
 
             <Button variant="outline" className="group" asChild>
               <a
-                href="https://drive.google.com/file/d/13msWYRF0iVfcGGDweQ257D7-I3upar47/view?usp=sharing"
+                href="https://drive.google.com/file/d/1N3DAckB_7PWK8UHbJ9_WO-ppolQ-0ZpR/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
