@@ -3,84 +3,60 @@
 import { useInView } from "framer-motion"
 import { useRef } from "react"
 import { motion } from "framer-motion"
-import { Code, Database, Smartphone, } from "lucide-react"
-
-export default function Services() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.2 })
-
- const services = [
-  {
-    icon: <Code className="h-10 w-10 text-primary" />,
-    title: "Full-Stack App Development",
-    description:
-      "End-to-end MERN–stack builds—from React/Next.js UIs to secure Node/Express APIs and MongoDB / SQL data layers—delivered production-ready with responsive design and JWT authentication.",
-  },
-  {
-    icon: <Database className="h-10 w-10 text-primary" />,
-    title: "Data-Driven & AI Integrations",
-    description:
-      "Designing scalable schemas and integrating OpenAI/REST services to add résumé analysis, search, or other intelligent features that turn raw data into meaningful user value.",
-  },
-  {
-    icon: <Smartphone className="h-10 w-10 text-primary" />,
-    title: "Code Review & Performance Tuning",
-    description:
-      "Debugging, refactoring, and optimizing existing React, Python, or C++ codebases—improving test coverage, fixing edge-case bugs, and boosting load times for seamless cross-device experiences.",
-  },
-]
-    
-
-  return (
-   import {
+import {
   Bot,
   BrainCircuit,
   Database,
   SearchCode,
   Server,
   Workflow,
-} from "lucide-react";
+} from "lucide-react"
 
-const services = [
-  {
-    title: "Generative AI Applications",
-    description:
-      "Develop intelligent applications powered by Large Language Models, prompt engineering, and modern AI frameworks.",
-    icon: <Bot className="h-6 w-6 text-primary" />,
-  },
-  {
-    title: "AI Agent Development",
-    description:
-      "Build AI agents and multi-agent workflows to automate business processes and enhance user experiences.",
-    icon: <BrainCircuit className="h-6 w-6 text-primary" />,
-  },
-  {
-    title: "Backend Development",
-    description:
-      "Create scalable backend systems using FastAPI, Node.js, REST APIs, authentication, and database integration.",
-    icon: <Server className="h-6 w-6 text-primary" />,
-  },
-  {
-    title: "Semantic Search & RAG",
-    description:
-      "Implement semantic search and Retrieval-Augmented Generation (RAG) solutions using vector embeddings.",
-    icon: <SearchCode className="h-6 w-6 text-primary" />,
-  },
-  {
-    title: "Database Solutions",
-    description:
-      "Design and manage scalable databases with PostgreSQL, MongoDB, Supabase, and optimized data architectures.",
-    icon: <Database className="h-6 w-6 text-primary" />,
-  },
-  {
-    title: "AI API Integration",
-    description:
-      "Integrate OpenAI, Gemini, Claude, Azure AI, and other AI services into production-ready applications.",
-    icon: <Workflow className="h-6 w-6 text-primary" />,
-  },
-];
+export default function Services() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, amount: 0.2 })
 
-<section
+  const services = [
+    {
+      title: "Generative AI Applications",
+      description:
+        "Develop intelligent applications powered by Large Language Models, prompt engineering, and modern AI frameworks.",
+      icon: <Bot className="h-6 w-6 text-primary" />,
+    },
+    {
+      title: "AI Agent Development",
+      description:
+        "Build AI agents and multi-agent workflows to automate business processes and enhance user experiences.",
+      icon: <BrainCircuit className="h-6 w-6 text-primary" />,
+    },
+    {
+      title: "Backend Development",
+      description:
+        "Create scalable backend systems using FastAPI, Node.js, REST APIs, authentication, and database integration.",
+      icon: <Server className="h-6 w-6 text-primary" />,
+    },
+    {
+      title: "Semantic Search & RAG",
+      description:
+        "Implement semantic search and Retrieval-Augmented Generation (RAG) solutions using vector embeddings.",
+      icon: <SearchCode className="h-6 w-6 text-primary" />,
+    },
+    {
+      title: "Database Solutions",
+      description:
+        "Design and manage scalable databases with PostgreSQL, MongoDB, Supabase, and optimized data architectures.",
+      icon: <Database className="h-6 w-6 text-primary" />,
+    },
+    {
+      title: "AI API Integration",
+      description:
+        "Integrate OpenAI, Gemini, Claude, Azure AI, and other AI services into production-ready applications.",
+      icon: <Workflow className="h-6 w-6 text-primary" />,
+    },
+  ]
+
+  return (
+    <section
   id="services"
   className="py-24 bg-muted/30 dark:bg-muted/10"
   ref={ref}
@@ -172,7 +148,7 @@ const services = [
         Have an AI or software project in mind?{" "}
         <a href="#contact">
           <span className="text-primary font-medium">
-            Let's connect
+            Let&apos;s connect
           </span>
         </a>{" "}
         and discuss how we can build an intelligent solution together.
